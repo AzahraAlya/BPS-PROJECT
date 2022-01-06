@@ -29,7 +29,7 @@ class C_dashboard extends BaseController
 			'validation' => \Config\Services::validation(),
 			'pencacah' => $M_pencacah->getPencacah($No_Urut),
 		];
-		return view('pencacah/detail', $data);
+		return view('pencacah/pencacahdetail', $data);
 	}
 
 	public function edit($No_Urut)

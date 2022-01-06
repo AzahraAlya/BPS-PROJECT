@@ -35,9 +35,9 @@ $routes->setAutoRoute(true);
 
 $routes->get('/', 'C_dashboard::index');
 $routes->get('/pencacah', 'C_dashboard::pencacah');
-$routes->get('/pencacah/detail/(:segment)', 'Dashboard::detail/$1');
-$routes->get('/pencacah/edit/(:segment)', 'Dashboard::edit/$1');
-$routes->post('/pencacah/update/(:segment)', 'Dashboard::update/$1');
+$routes->get('/pencacah/detail/(:segment)', 'C_dashboard::detail/$1');
+$routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1');
+$routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1');
 
 
 /*
