@@ -61,13 +61,14 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Data</span>
+                    <span>Pencacah</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="/pencacah">Pencacah</a>
-                        <a class="collapse-item" href="/buku">Data Buku</a>
+                        <a class="collapse-item" href="/pencacah">Edit Data</a>
+                        <a class="collapse-item" href="/pencacah/tambah">Tambah Data</a>
+                        <a class="collapse-item" href="/pencacah/home">Cari Data</a>
                     </div>
                 </div>
             </li>
@@ -76,13 +77,13 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Transaksi</span>
+                    <span>Pengawas</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="/peminjaman">Peminjaman</a>
-                        <a class="collapse-item" href="/pengembalian">Pengembalian</a>
+                        <a class="collapse-item" href="/pengawas">List Pencacah</a>
+                        <a class="collapse-item" href="/pengawas/tambah-kegiatan">Tambah Kegiatan</a>
                         <!-- <a class="collapse-item" href="utilities-animation.html">Animations</a>
                         <a class="collapse-item" href="utilities-other.html">Other</a> -->
                     </div>

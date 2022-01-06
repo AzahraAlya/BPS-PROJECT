@@ -38,8 +38,15 @@ $routes->get('/pencacah', 'C_dashboard::pencacah');
 $routes->get('/pencacah/detail/(:segment)', 'C_dashboard::detail/$1');
 $routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1');
 $routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1');
+$routes->get('/pencacah/home', 'C_dashboard::home');
+$routes->get('/pencacah/tambah', 'C_dashboard::tambah');
+$routes->post('/pencacah/store', 'C_dashboard::store');
 
 
+$routes->get('/pengawas', 'C_Pengawas::pengawas');
+$routes->get('/pengawas/nilai/(:segment)', 'C_Pengawas::nilai/$1');
+$routes->get('/pengawas/tambah-kegiatan', 'C_Pengawas::kegiatan');
+$routes->post('/pengawas/store-kegiatan', 'C_Pengawas::store_kegiatan');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
