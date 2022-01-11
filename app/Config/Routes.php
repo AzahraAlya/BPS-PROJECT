@@ -49,6 +49,7 @@ $routes->get('/pengawas/tambah-kegiatan', 'C_Pengawas::kegiatan');
 $routes->post('/pengawas/store-kegiatan', 'C_Pengawas::store_kegiatan');
 $routes->post('/pengawas/store-nilai', 'C_Pengawas::store_nilai');
 
+$routes->get('/admin/print', 'C_Admin::index');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
