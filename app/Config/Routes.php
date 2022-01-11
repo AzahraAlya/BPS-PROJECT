@@ -50,6 +50,8 @@ $routes->post('/pengawas/store-kegiatan', 'C_Pengawas::store_kegiatan');
 $routes->post('/pengawas/store-nilai', 'C_Pengawas::store_nilai');
 
 $routes->get('/admin/print', 'C_Admin::index');
+$routes->get('/admin/excel', 'C_Admin::excel');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

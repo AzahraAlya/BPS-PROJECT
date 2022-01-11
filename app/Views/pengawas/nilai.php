@@ -121,42 +121,21 @@
                                 <input type="radio" name="que4" id="options" value="5"> 5
                             </div>
 
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">Apa saja kelebihan Mitra ini?</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="que5[]" value="Disiplin" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Disiplin
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name = "que5[]" value="Tekun" id="defaultCheck2">
-                                    <label class="form-check-label" for="defaultCheck2">
-                                        Tekun
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name = "que5[]" value="Teliti" id="defaultCheck3">
-                                    <label class="form-check-label" for="defaultCheck3">
-                                        Teliti     
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name = "que5[]" value="Sabar" id="defaultCheck4">
-                                    <label class="form-check-label" for="defaultCheck4">
-                                        Sabar
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name = "que5[]" value="Smart" id="defaultCheck5">
-                                    <label class="form-check-label" for="defaultCheck5">
-                                        Smart
-                                    </label>
-                                    </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="ques5" class="form-label">Apa saja kelebihan Mitra ini?</label>
+                                </div>    
+                                <div class="col-75" style="margin-top: 25px;">
+                                    <input class="form-check-input" type="checkbox" name="que5[]" value="Disiplin">Disiplin <br>
+                                    <input class="form-check-input" type="checkbox" name="que5[]" value="Tekun">Tekun<br>
+                                    <input class="form-check-input" type="checkbox" name="que5[]" value="Smart">Smart<br>
+                                    <input class="form-check-input" type="checkbox" name="que5[]" value="Sabar">Sabar<br>
+                                
                                     <div class="form">
                                     <label for="formGroupExampleInput2" class="form-label">Lainnya</label>
                                     <input type="text" class="form-control" name = "que5">    
                                     </div>
+                                </div>    
                             </div>
                              
                             <div class="mb-3">

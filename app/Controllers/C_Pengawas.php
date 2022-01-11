@@ -54,7 +54,7 @@ class C_Pengawas extends BaseController
 			'que2'=> $this->request->getVar('que2'),
 			'que3'=> $this->request->getVar('que3'),
 			'que4'=> $this->request->getVar('que4'),
-			'que5'=> $this->request->getVar('que5'),
+			'que5' => $this->request->getVar('que5'),
 			'que6' => $this->request->getVar('que6'),
 			'catatan' => $this->request->getVar('catatan'),
 		];

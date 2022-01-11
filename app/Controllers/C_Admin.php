@@ -6,14 +6,24 @@ class C_Admin extends BaseController
 {
 	public function index()
 	{
-        $M_pencacah = model("M_pencacah");
+
         $M_nilai = model("M_nilai");
-        $data = [
-			'pencacah' => $M_pencacah->findAll(),
-			'nilai' => $M_nilai->findAll(),
+        
+        $admin = [
+            'admin' => $M_nilai->getDataAdmin(),
 
 		];
-		return view('admin/print-nilai',$data);
+		return view('admin/print-nilai',$admin);
 	}
 
+
+    public function excel(){
+        $M_nilai = model("M_nilai");
+        $data = [
+            'admin' => $M_nilai->getDataAdmin(),
+            
+
+		];
+		return view('admin/excel',$data);
+    }
 }

@@ -1,3 +1,4 @@
+
 <?= $this->extend('template'); ?>
 <?= $this->section('content'); ?>
 
@@ -57,6 +58,7 @@
                 <div class="card mt-3">
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary">Daftar Pencacah</h6>
+                        <a href="/admin/excel" class="btn btn-outline-danger shadow float-right">Excel<i class="fa fa-file-excel"></i></a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -76,19 +78,30 @@
                                         <th scope="col">Teknik Wawancara</th>
                                         <th scope="col">Ketepatan Waktu</th>
                                         <th scope="col">Respon Komunikasi</th>
+                                        <th scope="col">Kelebihan</th>
+                                        <th scope="col">Kekurangan</th>
                                         <th scope="col">Catatan</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach ($pencacah as $i => $pc) : ?>
+                                <?php foreach ($admin as $i => $adm) : ?>
                                         <tr>
                                             <th scope="row"><?= $i + 1;?></th>
-                                            <td><?= $pc['Kode_Mitra']; ?></td>
-                                            <td><?= $pc['NAMA']; ?></td>
-                                            <td><?= $pc['NIK']; ?></td>
-                                            <td><?= $pc['NOMOR_HP']; ?></td>
-                                            <td><?= $pc['ALAMAT']; ?> Kecamatan <?= $pc['KECAMATAN']; ?> Kabupaten <?= $pc['KABUPATEN']; ?></td>
-                                            <td><?= $nilai['nama_penilai'];?></td>
+                                            <td><?= $adm->kode_mitra; ?></td>
+                                            <td><?= $adm->NAMA; ?></td>
+                                            <td><?= $adm->NIK; ?></td>
+                                            <td><?= $adm->NOMOR_HP; ?></td>
+                                            <td><?= $adm->ALAMAT; ?></td>
+                                            <td><?= $adm->nama_penilai; ?></td>
+                                            <td><?= $adm->beban_kerja; ?></td>
+                                            <td><?= $adm->status; ?></td>
+                                            <td><?= $adm->que1; ?></td>
+                                            <td><?= $adm->que2; ?></td>
+                                            <td><?= $adm->que3; ?></td>
+                                            <td><?= $adm->que4; ?></td>
+                                            <td><?= $adm->que5; ?></td>
+                                            <td><?= $adm->que6; ?></td>
+                                            <td><?= $adm->catatan; ?></td>
                                         </tr>
                                     <?php endforeach; ?>
 

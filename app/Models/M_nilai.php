@@ -19,6 +19,14 @@ class M_nilai extends Model
         ->where('tb_nilai.id_nilai',$id)->get()->getRow();
         return $query;
     }
+
+    public function getDataAdmin(){
+        $query = $this->db->table('tb_nilai')->select('*')
+		->join('db_bps', 'tb_nilai.id_nilai = db_bps.No_Urut')->get()->getResult();
+        return $query;
+    }
+
+
 }
 
 
