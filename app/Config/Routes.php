@@ -47,6 +47,8 @@ $routes->get('/pengawas', 'C_Pengawas::pengawas');
 $routes->get('/pengawas/nilai/(:segment)', 'C_Pengawas::nilai/$1');
 $routes->get('/pengawas/tambah-kegiatan', 'C_Pengawas::kegiatan');
 $routes->post('/pengawas/store-kegiatan', 'C_Pengawas::store_kegiatan');
+$routes->post('/pengawas/store-nilai', 'C_Pengawas::store_nilai');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

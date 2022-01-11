@@ -53,7 +53,7 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Kode Mitra</label>
-                                <input type="text" class="form-control" id= "Kode_Mitra" name = "Kode_Mitra" autofocus value="<?= $pencacah['Kode_Mitra']; ?>" readonly>
+                                <input type="text" class="form-control" id= "kode_mitra" name = "kode_mitra" autofocus value="<?= $pencacah['Kode_Mitra']; ?>" readonly>
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Nama Penilai</label>
@@ -62,11 +62,11 @@
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Nama Kegiatan</label>
                                 
-                                <select name="id_kegiatan" class="form-control" required>
+                                <select name="nama_kegiatan" class="form-control" required>
                                     <option value="">-Pilih Kegiatan-</option>
                                     <?php
                                         foreach($kegiatan as $data){?>
-                                            <option value="<?= $data['id_kegiatan'];?>"><?= $data['nama_kegiatan'];?></option>   
+                                            <option value="<?= $data['nama_kegiatan'];?>"><?= $data['nama_kegiatan'];?></option>   
                                         <?php }?>
                                 </select>
                             </div>
@@ -76,12 +76,135 @@
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Status Keberadaan dan Partisipasi Mitra</label>
-                                    <select name="JENIS_KELAMIN" class="form-control" required>
+                                    <select name="status" class="form-control" required>
                                         <option value="">-Pilih-</option>
                                         <option value="Aktif">Aktif</option>
                                         <option value="Tidak Aktif">Tidak Aktif</option>
                                     </select>
                             </div>
+
+                            <!-- Halaman Berikutnya -->
+
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Bagaimana penguasaan konsep dan definisi Mitra ketika melaksanakan kegiatan pencacahan di lapangan?</label></br>
+                                <input type="radio" name="que1" id="options" value="1"> 1<br/>
+                                <input type="radio" name="que1" id="options" value="2"> 2<br/>
+                                <input type="radio" name="que1" id="options" value="3"> 3<br/>
+                                <input type="radio" name="que1" id="options" value="4"> 4<br/>
+                                <input type="radio" name="que1" id="options" value="5"> 5
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Bagaimana teknik wawancara yang dilakukan Mitra, jika dilihat dari segi probing (mencari jawaban dengan pertanyaan lain yang berkaitan/mendekati)?</label>
+                                <input type="radio" name="que2" id="options" value="1"> 1<br/>
+                                <input type="radio" name="que2" id="options" value="2"> 2<br/>
+                                <input type="radio" name="que2" id="options" value="3"> 3<br/>
+                                <input type="radio" name="que2" id="options" value="4"> 4<br/>
+                                <input type="radio" name="que2" id="options" value="5"> 5    
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Tingkat ketepatan waktu Mitra dalam menyelesaikan tugas/target yang diberikan?</label></br>
+                                <input type="radio" name="que3" id="options" value="1"> 1<br/>
+                                <input type="radio" name="que3" id="options" value="2"> 2<br/>
+                                <input type="radio" name="que3" id="options" value="3"> 3<br/>
+                                <input type="radio" name="que3" id="options" value="4"> 4<br/>
+                                <input type="radio" name="que3" id="options" value="5"> 5
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Tingkat respon komunikasi yang dilakukan bersama Mitra ketika dihubungi/dibutuhkan?</label></br>
+                                <input type="radio" name="que4" id="options" value="1"> 1<br/>
+                                <input type="radio" name="que4" id="options" value="2"> 2<br/>
+                                <input type="radio" name="que4" id="options" value="3"> 3<br/>
+                                <input type="radio" name="que4" id="options" value="4"> 4<br/>
+                                <input type="radio" name="que4" id="options" value="5"> 5
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Apa saja kelebihan Mitra ini?</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="que5[]" value="Disiplin" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Disiplin
+                                    </label>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name = "que5[]" value="Tekun" id="defaultCheck2">
+                                    <label class="form-check-label" for="defaultCheck2">
+                                        Tekun
+                                    </label>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name = "que5[]" value="Teliti" id="defaultCheck3">
+                                    <label class="form-check-label" for="defaultCheck3">
+                                        Teliti     
+                                    </label>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name = "que5[]" value="Sabar" id="defaultCheck4">
+                                    <label class="form-check-label" for="defaultCheck4">
+                                        Sabar
+                                    </label>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name = "que5[]" value="Smart" id="defaultCheck5">
+                                    <label class="form-check-label" for="defaultCheck5">
+                                        Smart
+                                    </label>
+                                    </div>
+                                    <div class="form">
+                                    <label for="formGroupExampleInput2" class="form-label">Lainnya</label>
+                                    <input type="text" class="form-control" name = "que5">    
+                                    </div>
+                            </div>
+                             
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Apa saja kekurangan Mitra ini? </label>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="que6" value="Tidak Punya Kendaraan" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Tidak Punya Kendaraan
+                                    </label>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name = "que6" value="Malas" id="defaultCheck2">
+                                    <label class="form-check-label" for="defaultCheck2">
+                                        Malas
+                                    </label>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name = "que6" value="Lambat berhitung " id="defaultCheck3">
+                                    <label class="form-check-label" for="defaultCheck3">
+                                        Lambat berhitung     
+                                    </label>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name = "que6" value="Ceroboh" id="defaultCheck4">
+                                    <label class="form-check-label" for="defaultCheck4">
+                                        Ceroboh
+                                    </label>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name = "que6" value="Sulit Bergaul" id="defaultCheck5">
+                                    <label class="form-check-label" for="defaultCheck5">
+                                        Sulit Bergaul
+                                    </label>
+                                    </div>
+                                    <div class="mb-0">
+                                    <label for="formGroupExampleInput2" class="form-label">Lainnya</label>
+                                    <input type="text" class="form-control" name = "que6">    
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Catatan</label>
+                                <input type="text" class="form-control"  name = "catatan">
+                            </div>
+
+
+                                            
                             <button type="btn" class="btn btn-primary">
                                 <i class="fas fa-paper-plane"></i>Simpan</button>
                         </form>

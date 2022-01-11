@@ -42,4 +42,25 @@ class C_Pengawas extends BaseController
 			$M_kegiatan->insert($data);
 			return redirect()->to(base_url('/pengawas/tambah-kegiatan'));
 	}
+
+	public function store_nilai(){
+		$data = [
+			'kode_mitra' => $this->request->getVar('kode_mitra'),
+			'nama_penilai' => $this->request->getVar('nama_penilai'),
+			'nama_kegiatan' => $this->request->getVar('nama_kegiatan'),
+			'beban_kerja' => $this->request->getVar('beban_kerja'),
+			'status' => $this->request->getVar('status'),
+			'que1' => $this->request->getVar('que1'),
+			'que2'=> $this->request->getVar('que2'),
+			'que3'=> $this->request->getVar('que3'),
+			'que4'=> $this->request->getVar('que4'),
+			'que5'=> $this->request->getVar('que5'),
+			'que6' => $this->request->getVar('que6'),
+			'catatan' => $this->request->getVar('catatan'),
+		];
+		$M_nilai = model("M_nilai");
+		$M_nilai->insert($data);
+		return redirect()->to(base_url('/pengawas'));
+}
+
 }
