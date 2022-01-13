@@ -40,8 +40,8 @@ $routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1');
 $routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1');
 $routes->get('/pencacah/home', 'C_dashboard::home');
 $routes->post('/pencacah/dataMitra', 'C_dashboard::homeData');
-$routes->get('/pencacah/tambah', 'C_dashboard::tambah');
-$routes->post('/pencacah/store', 'C_dashboard::store');
+// $routes->get('/pencacah/tambah', 'C_dashboard::tambah');
+// $routes->post('/pencacah/store', 'C_dashboard::store');
 
 
 
@@ -57,6 +57,9 @@ $routes->get('/pengawas/savePenilaian', 'C_Pengawas::savePenilaian');
 
 $routes->get('/admin/print', 'C_Admin::index');
 $routes->get('/admin/excel', 'C_Admin::excel');
+
+$routes->get('/admin/tambah-mitra', 'C_Mitra::tambah');
+$routes->post('/admin/store', 'C_Mitra::store');
 
 /*
  * --------------------------------------------------------------------

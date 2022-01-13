@@ -27,4 +27,24 @@ class M_pencacah extends Model
 
 		return $this->where(['No_Urut'=> $No_Urut]) -> first();
 	}
+
+	public function id_KodeMitra(){
+		$kode = $this->db->table('db_bps')
+		->select('RIGHT(Kode_Mitra,5) as Kode_Mitra', false)
+		->orderBy('Kode_Mitra', 'DESC')
+		->limit(1)->get()->getRowArray();
+    	$kode_mitra = isset($kode['Kode_Mitra']) ? $kode['Kode_Mitra'] : '';
+		if($kode_mitra ==null){
+			$no = 1;
+		}else{
+			$no = intval($kode_mitra) + 1;
+		}
+
+		$tgl = 18;
+		$batas = str_pad($no, 5, "0", STR_PAD_LEFT);
+		$id_mitra = $tgl.$batas;
+		return $id_mitra;
+	}
+
+
 }

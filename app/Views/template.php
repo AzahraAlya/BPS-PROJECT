@@ -67,7 +67,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
                         <a class="collapse-item" href="/pencacah">Edit Data</a>
-                        <a class="collapse-item" href="/pencacah/tambah">Tambah Data</a>
+                        <!-- <a class="collapse-item" href="/pencacah/tambah">Tambah Data</a> -->
                         <a class="collapse-item" href="/pencacah/home">Cari Data</a>
                     </div>
                 </div>
@@ -100,6 +100,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
                         <a class="collapse-item" href="/admin/print">Print to excel</a>
+                        <a class="collapse-item" href="/admin/tambah-mitra">Tambah Data Mitra Baru</a>
                         <!-- <a class="collapse-item" href="/pengawas/tambah-kegiatan">Tambah Kegiatan</a> -->
                         <!-- <a class="collapse-item" href="utilities-animation.html">Animations</a>
                         <a class="collapse-item" href="utilities-other.html">Other</a> -->
