@@ -48,8 +48,6 @@ $routes->post('/pencacah/dataMitra', 'C_dashboard::homeData');
 
 $routes->get('/pengawas', 'C_Pengawas::pengawas');
 $routes->get('/pengawas/nilai/(:segment)', 'C_Pengawas::nilai/$1');
-$routes->get('/pengawas/tambah-kegiatan', 'C_Pengawas::kegiatan');
-$routes->post('/pengawas/store-kegiatan', 'C_Pengawas::store_kegiatan');
 $routes->post('/pengawas/store-nilai', 'C_Pengawas::store_nilai');
 $routes->get('/pengawas/penilaian', 'C_Pengawas::penilaian');
 $routes->post('/pengawas/selanjutnyaa', 'C_Pengawas::selanjutnya');
@@ -57,6 +55,9 @@ $routes->get('/pengawas/savePenilaian', 'C_Pengawas::savePenilaian');
 
 $routes->get('/admin/print', 'C_Admin::index');
 $routes->get('/admin/excel', 'C_Admin::excel');
+$routes->get('/admin/penilaian', 'C_Admin::penilaian');
+$routes->get('/admin/tambah-kegiatan', 'C_Admin::kegiatan');
+$routes->post('/admin/store-kegiatan', 'C_Admin::store_kegiatan');
 
 $routes->get('/admin/tambah-mitra', 'C_Mitra::tambah');
 $routes->post('/admin/store', 'C_Mitra::store');

@@ -30,19 +30,6 @@ class C_Pengawas extends BaseController
 		return view('pengawas/nilai',$data);
 	}
 
-	public function kegiatan(){
-		return view('pengawas/kegiatan');
-	}
-
-	public function store_kegiatan(){
-			$data = [
-				'nama_kegiatan' => $this->request->getVar('nama_kegiatan'),
-			];
-			$M_kegiatan = model("M_kegiatan");
-			$M_kegiatan->insert($data);
-			return redirect()->to(base_url('/pengawas/tambah-kegiatan'));
-	}
-
 	public function store_nilai(){
 		$data = [
 			'kode_mitra' => $this->request->getVar('kode_mitra'),

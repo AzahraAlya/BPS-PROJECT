@@ -8,7 +8,7 @@ class C_dashboard extends BaseController
 {
 	public function index()
 	{
-		return view('v_admin');
+		return view('template');
 	}
 
 	public function pencacah(){

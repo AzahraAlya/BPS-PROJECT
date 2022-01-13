@@ -51,7 +51,7 @@
                         Tambah data kegiatan 
                     </div>
                     <div class="card-body">
-                    <form action="/pengawas/store-kegiatan" method="POST">  
+                    <form action="/admin/store-kegiatan" method="POST">  
                         <div class="card-body">
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Nama Kegiatan</label>
