@@ -105,4 +105,8 @@ class C_dashboard extends BaseController
 
 		return view('pencacah/home');
 	}
+
+	public function homeData(){
+		return view('pencacah/data');
+	}
 }

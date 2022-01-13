@@ -44,23 +44,15 @@
 
             </nav>
         <!-- End of Topbar -->
-
-<div align="center">
-<form action="/pencacah/dataMitra" method="post">
-        <div class="card" style="width: 25rem;">
-            <div class="card-header">
-                <b>Masukkan Kode Mitra</b>
-            </div>
-            <div class="card-body">
-                <div align="left">
-                    <a>Kode Mitra:</a>
+                <div class="card mt-3">
+                    <div class="card-header">
+                        Form Edit Data Anggota
+                    </div>
+                    
+                    <div class="card-body">
+                            <a href="/pengawas/savePenilaian">
+                                <i class="fas fa-paper-plane"></i>Kirim</a>
+                    </div>
                 </div>
-                <input class="form-control" type="text" name="Kode_Mitra" placeholder="Kode Mitra" aria-label="default input example" required>
-                <br>
-                <input class="btn btn-outline-primary" type="submit" value="Selanjutnya">
-            </div>
-        </div>
-</form>             
-</div>
 
-<?= $this->endSection(); ?>
+     <?= $this->endSection(); ?>

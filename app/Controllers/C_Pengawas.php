@@ -63,4 +63,30 @@ class C_Pengawas extends BaseController
 		return redirect()->to(base_url('/pengawas'));
 }
 
+	public function penilaian(){
+		$M_kegiatan = model("M_kegiatan");
+		$data = [
+			'kegiatan' => $M_kegiatan->findAll(),
+		];
+		return view('pengawas/penilaian',$data);
+	}
+
+	public function selanjutnya(){
+		return view('pengawas/selanjutnya');
+	}
+
+	public function savePenilaian(){
+		$data = [
+            'kode_mitra' => $this->request->getVar('kode_mitra'),
+            'nama_penilai' => $this->request->getVar('nama_penilai'),
+            'nama_kegiatan' => $this->request->getVar('nama_kegiatan'),
+            'beban_kerja' => $this->request->getVar('beban_kerja'),
+            'status' => $this->request->getVar('status'),
+        ];
+		$M_nilai = model("M_nilai");
+		$M_nilai->insert($data);
+		// dd($data);
+		return view('/pengawas/selanjutnya');
+	}
+
 }

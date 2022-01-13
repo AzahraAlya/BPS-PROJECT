@@ -21,6 +21,7 @@
     <link href="/assets/startbootstrap/css/dboard.css" rel="stylesheet">
 
     <link href="/assets/startbootstrap/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body id="page-top">
@@ -110,17 +111,95 @@
 
 
         </ul>
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
 
-            <!-- Main Content -->
-            <div id="content">
-                <?= $this->renderSection('content'); ?> 
-            </div>
-            <!-- End of Main Content -->
+    <!-- Main Content -->
+    <div id="content">
 
-            <!-- Bootstrap core JavaScript-->
-            <script src="/assets/startbootstrap/vendor/jquery/jquery.min.js"></script>
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link d-md-1 rounded-circle mr-3">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Topbar Search -->
+
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+
+                <!-- Nav Item - User Information -->
+                <li class="nav-item dropdown no-arrow">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-none d-lg-inline small text-capitalize">
+                            Administrator
+                        </span>
+                        <img class="img-profile rounded-circle" src="<?= base_url('assets/startbootstrap/img/avatar/user.png') ?>">
+                    </a>
+                    <!-- Dropdown - User Information -->
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                    <a href="/logout" class="dropdown-item"  data-target="#logoutModal">
+                              <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                              Logout
+                          </a>
+                    </div>
+                </li>
+                <div class="topbar-divider d-none d-sm-block"></div>
+
+                <!-- Nav Item - User Information -->
+
+            </ul>
+
+            </nav>
+        <!-- End of Topbar -->
+                <div class="card mt-3">
+                    <div class="card-header">
+                        Form Edit Data Anggota
+                    </div>
+                    <div class="card-body">
+                    <form action="/pengawas/selanjutnyaa" method="POST">  
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Kode Mitra</label>
+                                <input type="text" class="form-control" id= "kode_mitra" name = "kode_mitra">
+                            </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Nama Penilai</label>
+                                <input type="text" class="form-control" id= "nama_penilai" name = "nama_penilai">
+                            </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Nama Kegiatan</label>
+                                
+                                <select name="nama_kegiatan" class="form-control" required>
+                                    <option value="">-Pilih Kegiatan-</option>
+                                    <?php
+                                        foreach($kegiatan as $data){?>
+                                            <option value="<?= $data['nama_kegiatan'];?>"><?= $data['nama_kegiatan'];?></option>   
+                                        <?php }?>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Volume Beban Kerja</label>
+                                <input type="text" class="form-control" id= "beban_kerja" name = "beban_kerja">    
+                            </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Status Keberadaan dan Partisipasi Mitra</label><br/>
+                                <input type="radio" name="status" id="options" value="Aktif">Aktif<br/>
+                                <input type="radio" name="status" id="options" value="Tidak Aktif">Tidak Aktif<br/>
+                            </div>
+
+                            <button type="btn" class="btn btn-primary" name="btn-simpan">
+                                <i class="fas fa-paper-plane"></i>Simpan</button>
+                            <button type="btn" class="btn btn-secondary" name="btn-selanjutnya">
+                                <i class="fas fa-paper-plane"></i>Selanjutnya</button>
+                        </form>
+                    </div>
+                </div>
+
+                <script src="/assets/startbootstrap/vendor/jquery/jquery.min.js"></script>
             <script src="/assets/startbootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
             <!-- Core plugin JavaScript-->
@@ -143,8 +222,13 @@
            <script src="/assets/startbootstrap/js/demo/datatables-demo.js"></script>
         </div>
     </div>
+    <script>
+               $('input[name="status"]').on('change',function()
+               {
+                   $('button[name="btn-selanjutnya"]').attr('disabled',this.value!="Aktif")
 
+               });
+           </script>
 </body>
-<?= $this->renderSection('myscript'); ?>
 
 </html>
