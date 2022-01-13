@@ -58,6 +58,8 @@ $routes->get('/admin/excel', 'C_Admin::excel');
 $routes->get('/admin/penilaian', 'C_Admin::penilaian');
 $routes->get('/admin/tambah-kegiatan', 'C_Admin::kegiatan');
 $routes->post('/admin/store-kegiatan', 'C_Admin::store_kegiatan');
+$routes->get('/admin/mitra-lengkap', 'C_Admin::lengkap');
+$routes->get('/admin/data-penilaian', 'C_Admin::dataPenilaian');
 
 $routes->get('/admin/tambah-mitra', 'C_Mitra::tambah');
 $routes->post('/admin/store', 'C_Mitra::store');

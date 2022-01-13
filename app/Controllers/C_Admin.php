@@ -50,4 +50,18 @@ class C_Admin extends BaseController
 			$M_kegiatan->insert($data);
 			return redirect()->to(base_url('/admin/tambah-kegiatan'));
 	}
+
+	public function lengkap(){
+		return view('/admin/data-lengkap');
+	}
+
+	public function dataPenilaian(){
+		$M_nilai = model("M_nilai");
+        
+        $admin = [
+            'admin' => $M_nilai->getDataAdmin(),
+
+		];
+        return view('admin/data-penilaian', $admin);
+	}
 }

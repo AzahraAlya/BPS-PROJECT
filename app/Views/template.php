@@ -99,9 +99,10 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
                         <a class="collapse-item" href="/admin/print">Print to excel</a>
-                        <a class="collapse-item" href="/admin/penilaian">Data Penilaian Mitra</a>
+                        <a class="collapse-item" href="/admin/data-penilaian">Data Penilaian Mitra</a>
                         <a class="collapse-item" href="/admin/tambah-mitra">Tambah Data Mitra Baru</a>
                         <a class="collapse-item" href="/admin/tambah-kegiatan">Tambah Kegiatan</a>
+                        <a class="collapse-item" href="/admin/mitra-lengkap">Data Mitra Lengkap</a>
                         <!-- <a class="collapse-item" href="/pengawas/tambah-kegiatan">Tambah Kegiatan</a> -->
                         <!-- <a class="collapse-item" href="utilities-animation.html">Animations</a>
                         <a class="collapse-item" href="utilities-other.html">Other</a> -->
