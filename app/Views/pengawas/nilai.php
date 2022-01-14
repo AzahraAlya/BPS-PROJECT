@@ -158,6 +158,7 @@
 
             </nav>
         <!-- End of Topbar -->
+        <div class="container">
                 <div class="card mt-3">
                         <div class="card-header">
                             Form Edit Data Anggota
@@ -165,45 +166,84 @@
                     <div class="card-body">
                     <form action="/pengawas/store-nilai" method="POST">  
                         <div class="card-body">
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput" class="form-label">Kode Mitra</label>
-                                <input type="text" class="form-control" id= "kode_mitra" name = "kode_mitra" autofocus value="<?= $pencacah['Kode_Mitra']; ?>" readonly>
+
+
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                            <label for="validationCustom03">Kode Mitra</label>
+                            <input type="text" class="form-control" name="kode_mitra" autofocus value="<?= $pencacah['Kode_Mitra']; ?>" readonly>
+                            <div class="invalid-feedback">
+                                Please provide a valid city.
                             </div>
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput" class="form-label">Nama</label>
-                                <input type="text" class="form-control" id= "nama" name = "nama" autofocus value="<?= $pencacah['NAMA']; ?>" readonly>
                             </div>
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput" class="form-label">NIK</label>
-                                <input type="text" class="form-control" id= "nik" name = "nik" autofocus value="<?= $pencacah['NIK']; ?>" readonly>
+                            <div class="col-md-6 mb-3">
+                            <label for="validationCustom04">Nama</label>
+                            <input type="text" class="form-control"name="nama" autofocus value="<?= $pencacah['NAMA']; ?>" readonly>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
                             </div>
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput" class="form-label">Nomor HP</label>
-                                <input type="text" class="form-control" id= "no_hp" name = "no_hp" autofocus value="<?= $pencacah['NOMOR_HP']; ?>" readonly>
                             </div>
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput" class="form-label">Alamat</label>
-                                <input type="text" class="form-control" id= "alamat" name = "alamat" autofocus value="<?= $pencacah['ALAMAT']; ?>" readonly>
+                        </div>
+                        <!-- tampilan -->
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                            <label for="validationCustom05">NIK</label>
+                            <input type="text" class="form-control" name="nik" autofocus value="<?= $pencacah['NIK']; ?>" readonly>
+                            <div class="invalid-feedback">
+                                Please provide a valid zip.
                             </div>
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">Nama Penilai</label>
-                                <input type="text" class="form-control" id= "nama_penilai" name = "nama_penilai">
                             </div>
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput" class="form-label">Nama Kegiatan</label>
-                                
-                                <select name="nama_kegiatan" class="form-control" required>
+                            <div class="col-md-6 mb-3">
+                            <label for="validationCustom01">Nomor HP</label>
+                            <input type="text" class="form-control" name="no_hp" autofocus value="<?= $pencacah['NOMOR_HP']; ?>" readonly>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                        <div class="col">
+                            <label for="validationCustom02">Alamat</label>
+                            <input type="text" class="form-control"name="alamat" autofocus value="<?= $pencacah['ALAMAT']; ?>" readonly>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        </div>
+
+                        <br/><div class="form-row">
+                            <div class="col-md-4 mb-3">    
+                            <label for="validationCustom03">Nama Penilai</label>
+                            <input type="text" class="form-control" id= "nama_penilai" name = "nama_penilai">
+                            <div class="invalid-feedback">
+                                Please provide a valid city.
+                            </div>
+                            <div class="small">*Diisi Oleh Penilai</div><br/>
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                            <label for="validationCustom04">Nama Kegiatan</label>
+                            <select name="nama_kegiatan" class="form-control" required>
                                     <option value="">-Pilih Kegiatan-</option>
                                     <?php
                                         foreach($kegiatan as $data){?>
                                             <option value="<?= $data['nama_kegiatan'];?>"><?= $data['nama_kegiatan'];?></option>   
                                         <?php }?>
-                                </select>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
                             </div>
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">Volume Beban Kerja</label>
-                                <input type="text" class="form-control" id= "beban_kerja" name = "beban_kerja">    
                             </div>
+                            <div class="col-md-4 mb-3">
+                            <label for="validationCustom05">Volume Beban Kerja</label>
+                            <input type="text" class="form-control" id= "beban_kerja" name = "beban_kerja">
+                            <div class="invalid-feedback">
+                                Please provide a valid zip.
+                            </div>
+                            </div>
+                        </div>
+
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Status Keberadaan dan Partisipasi Mitra</label><br/>
                                 <input type="radio" name="status" id="options" value="Aktif">Aktif<br/>
@@ -255,8 +295,8 @@
                                     <input type="checkbox" name = "que5[]" value="Teliti" id="defaultCheck3">Teliti<br/>
                                     <input type="checkbox" name = "que5[]" value="Sabar" id="defaultCheck4">Sabar<br/>
                                     <input type="checkbox" name = "que5[]" value="Tekun" id="defaultCheck5">Tekun<br/>
-                                    <input type="text" class="form-control" name = "que5[]">Lainnya<br/>    
-                                    </div>
+                                    <label class="form-label">Lainnya </label><br/>
+                                    <input type="text" class="form-control col-md-6 mb-3" name = "que5[]">   
                                 </label>
                             </div>
 
@@ -268,14 +308,14 @@
                                     <input type="checkbox" name = "que6[]" value="Ceroboh" id="defaultCheck3">Ceroboh<br/>
                                     <input type="checkbox" name = "que6[]" value="Lambat Berhitung" id="defaultCheck4">Lambat Berhitung<br/>
                                     <input type="checkbox" name = "que6[]" value="Sulit bergaul" id="defaultCheck5">Sulit bergaul<br/>
-                                    <input type="text" class="form-control" name = "que6[]">Lainnya<br/>    
-                                    </div>
+                                    <label class="form-label">Lainnya </label><br/>
+                                    <input type="text" class="form-control col-md-6 mb-3" name = "que6[]">  
                                 </label>
                             </div>
 
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Catatan</label>
-                                <input type="text" class="form-control"  name = "catatan">
+                                <input type="text" class="form-control col-md-6 mb-3"  name = "catatan">
                             </div>
                         </div>    
            
@@ -285,6 +325,7 @@
                         </form>
                     </div>
                 </div>
+        </div>
 
                             <!-- Bootstrap core JavaScript-->
             <script src="/assets/startbootstrap/vendor/jquery/jquery.min.js"></script>

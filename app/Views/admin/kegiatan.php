@@ -45,22 +45,25 @@
             </nav>
         <!-- End of Topbar -->
 
+                <div class="container">
+                <div align="center">
 
-                <div class="card mt-3">
+            <form action="/admin/store-kegiatan" method="post">
+                <div class="card" style="width: 25rem;">
                     <div class="card-header">
-                        Tambah data kegiatan 
+                        <b>Masukkan Nama Kegiatan Baru</b>
                     </div>
                     <div class="card-body">
-                    <form action="/admin/store-kegiatan" method="POST">  
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput" class="form-label">Nama Kegiatan</label>
-                                <input type="text" class="form-control" id= "nama_kegiatan" name = "nama_kegiatan">
-                            </div>
-                            <button type="btn" class="btn btn-primary">
+                        <div align="left">
+                            <a>Nama Kegiatan:</a>
+                        </div>
+                        <input type="text" class="form-control" id= "nama_kegiatan" name = "nama_kegiatan" required>
+                        <br>
+                        <button type="btn" class="btn btn-primary">
                                 <i class="fas fa-paper-plane"></i>Simpan</button>
-                        </form>
                     </div>
                 </div>
+            </form>
+        </div>
 
                 <?= $this->endSection(); ?>
