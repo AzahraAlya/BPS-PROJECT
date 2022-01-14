@@ -9,7 +9,7 @@ class M_nilai extends Model
 
     protected $table                = 'tb_nilai';
 	protected $primaryKey           = 'id_nilai';
-	protected $allowedFields        = ['kode_mitra','nama_penilai','nama_kegiatan','beban_kerja','status','que1','que2','que3','que4','que5','que6','catatan', 'created_at', 'updated_at'];
+	protected $allowedFields        = ['kode_mitra','nama','nik','no_hp','alamat','nama_penilai','nama_kegiatan','beban_kerja','status','que1','que2','que3','que4','que5','que6','catatan', 'created_at', 'updated_at'];
 	protected $useTimestamps        = true;
 
 

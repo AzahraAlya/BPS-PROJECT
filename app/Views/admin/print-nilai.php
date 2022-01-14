@@ -88,10 +88,10 @@
                                         <tr>
                                             <th scope="row"><?= $i + 1;?></th>
                                             <td><?= $adm->kode_mitra; ?></td>
-                                            <td><?= $adm->NAMA; ?></td>
-                                            <td><?= $adm->NIK; ?></td>
-                                            <td><?= $adm->NOMOR_HP; ?></td>
-                                            <td><?= $adm->ALAMAT; ?></td>
+                                            <td><?= $adm->nama; ?></td>
+                                            <td><?= $adm->nik; ?></td>
+                                            <td><?= $adm->no_hp; ?></td>
+                                            <td><?= $adm->alamat; ?></td>
                                             <td><?= $adm->nama_penilai; ?></td>
                                             <td><?= $adm->beban_kerja; ?></td>
                                             <td><?= $adm->status; ?></td>

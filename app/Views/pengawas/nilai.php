@@ -67,7 +67,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="/pencacah">Edit Data</a>
+                        <!-- <a class="collapse-item" href="/pencacah">Edit Data</a> -->
                         <!-- <a class="collapse-item" href="/pencacah/tambah">Tambah Data</a> -->
                         <a class="collapse-item" href="/pencacah/home">Cari Data</a>
                     </div>
@@ -100,8 +100,8 @@
                 <div id="adminUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="/admin/print">Print to excel</a>
-                        <a class="collapse-item" href="/admin/penilaian">Data Penilaian Mitra</a>
+                        <a class="collapse-item" href="/admin/print">Data Penilaian Mitra</a>
+                        <!-- <a class="collapse-item" href="/admin/penilaian">Data Penilaian Mitra</a> -->
                         <a class="collapse-item" href="/admin/tambah-mitra">Tambah Data Mitra Baru</a>
                         <a class="collapse-item" href="/pengawas/tambah-kegiatan">Tambah Kegiatan</a>
                         <!-- <a class="collapse-item" href="/pengawas/tambah-kegiatan">Tambah Kegiatan</a> -->
@@ -168,6 +168,22 @@
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Kode Mitra</label>
                                 <input type="text" class="form-control" id= "kode_mitra" name = "kode_mitra" autofocus value="<?= $pencacah['Kode_Mitra']; ?>" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Nama</label>
+                                <input type="text" class="form-control" id= "nama" name = "nama" autofocus value="<?= $pencacah['NAMA']; ?>" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">NIK</label>
+                                <input type="text" class="form-control" id= "nik" name = "nik" autofocus value="<?= $pencacah['NIK']; ?>" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Nomor HP</label>
+                                <input type="text" class="form-control" id= "no_hp" name = "no_hp" autofocus value="<?= $pencacah['NOMOR_HP']; ?>" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Alamat</label>
+                                <input type="text" class="form-control" id= "alamat" name = "alamat" autofocus value="<?= $pencacah['ALAMAT']; ?>" readonly>
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Nama Penilai</label>

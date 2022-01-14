@@ -33,6 +33,10 @@ class C_Pengawas extends BaseController
 	public function store_nilai(){
 		$data = [
 			'kode_mitra' => $this->request->getVar('kode_mitra'),
+			'nama' => $this->request->getVar('nama'),
+			'nik' => $this->request->getVar('nik'),
+			'no_hp' => $this->request->getVar('no_hp'),
+			'alamat' => $this->request->getVar('alamat'),
 			'nama_penilai' => $this->request->getVar('nama_penilai'),
 			'nama_kegiatan' => $this->request->getVar('nama_kegiatan'),
 			'beban_kerja' => $this->request->getVar('beban_kerja'),

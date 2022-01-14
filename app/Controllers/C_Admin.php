@@ -55,13 +55,13 @@ class C_Admin extends BaseController
 		return view('/admin/data-lengkap');
 	}
 
-	public function dataPenilaian(){
-		$M_nilai = model("M_nilai");
+	// public function dataPenilaian(){
+	// 	$M_nilai = model("M_nilai");
         
-        $admin = [
-            'admin' => $M_nilai->getDataAdmin(),
+    //     $admin = [
+    //         'admin' => $M_nilai->getDataAdmin(),
 
-		];
-        return view('admin/data-penilaian', $admin);
-	}
+	// 	];
+    //     return view('admin/data-penilaian', $admin);
+	// }
 }

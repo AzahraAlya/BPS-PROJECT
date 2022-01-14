@@ -34,7 +34,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 
 $routes->get('/', 'C_dashboard::index');
-$routes->get('/pencacah', 'C_dashboard::pencacah');
+// $routes->get('/pencacah', 'C_dashboard::pencacah');
 $routes->get('/pencacah/detail/(:segment)', 'C_dashboard::detail/$1');
 $routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1');
 $routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1');
@@ -60,7 +60,7 @@ $routes->get('/admin/penilaian', 'C_Admin::penilaian');
 $routes->get('/admin/tambah-kegiatan', 'C_Admin::kegiatan');
 $routes->post('/admin/store-kegiatan', 'C_Admin::store_kegiatan');
 $routes->get('/admin/mitra-lengkap', 'C_Admin::lengkap');
-$routes->get('/admin/data-penilaian', 'C_Admin::dataPenilaian');
+// $routes->get('/admin/data-penilaian', 'C_Admin::dataPenilaian');
 
 $routes->get('/admin/tambah-mitra', 'C_Mitra::tambah');
 $routes->post('/admin/store', 'C_Mitra::store');

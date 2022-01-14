@@ -66,7 +66,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="/pencacah">Edit Data</a>
+                        <!-- <a class="collapse-item" href="/pencacah">Edit Data</a> -->
                         <!-- <a class="collapse-item" href="/pencacah/tambah">Tambah Data</a> -->
                         <a class="collapse-item" href="/pencacah/home">Cari Data</a>
                     </div>
@@ -98,8 +98,8 @@
                 <div id="adminUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="/admin/print">Print to excel</a>
-                        <a class="collapse-item" href="/admin/data-penilaian">Data Penilaian Mitra</a>
+                        <a class="collapse-item" href="/admin/print">Data Penilaian Mitra</a>
+                        <!-- <a class="collapse-item" href="/admin/data-penilaian">Data Penilaian Mitra</a> -->
                         <a class="collapse-item" href="/admin/tambah-mitra">Tambah Data Mitra Baru</a>
                         <a class="collapse-item" href="/admin/tambah-kegiatan">Tambah Kegiatan</a>
                         <a class="collapse-item" href="/admin/mitra-lengkap">Data Mitra Lengkap</a>
