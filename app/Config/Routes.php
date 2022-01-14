@@ -40,6 +40,7 @@ $routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1');
 $routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1');
 $routes->get('/pencacah/home', 'C_dashboard::home');
 $routes->post('/pencacah/dataMitra', 'C_dashboard::homeData');
+$routes->post('/pencacah/homeData/(:segment)', 'C_dashboard::homeData/$1');
 // $routes->get('/pencacah/tambah', 'C_dashboard::tambah');
 // $routes->post('/pencacah/store', 'C_dashboard::store');
 

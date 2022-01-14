@@ -28,6 +28,14 @@ class M_pencacah extends Model
 		return $this->where(['No_Urut'=> $No_Urut]) -> first();
 	}
 
+	public function getPencacahdata($kode = false)
+	{
+		if ($kode == false) {
+			return $this->findAll();
+		}
+		return $this->where(['Kode_Mitra' => $kode])->first();
+	}
+
 	public function id_KodeMitra(){
 		$kode = $this->db->table('db_bps')
 		->select('RIGHT(Kode_Mitra,5) as Kode_Mitra', false)

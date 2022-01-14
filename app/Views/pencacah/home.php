@@ -30,10 +30,10 @@
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                    <a href="/logout" class="dropdown-item"  data-target="#logoutModal">
-                              <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                              Logout
-                          </a>
+                        <a href="/logout" class="dropdown-item" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Logout
+                        </a>
                     </div>
                 </li>
                 <div class="topbar-divider d-none d-sm-block"></div>
@@ -42,25 +42,36 @@
 
             </ul>
 
-            </nav>
+        </nav>
         <!-- End of Topbar -->
 
-<div align="center">
-<form action="/pencacah/dataMitra" method="post">
-        <div class="card" style="width: 25rem;">
-            <div class="card-header">
-                <b>Masukkan Kode Mitra</b>
-            </div>
-            <div class="card-body">
-                <div align="left">
-                    <a>Kode Mitra:</a>
-                </div>
-                <input class="form-control" type="text" name="Kode_Mitra" placeholder="Kode Mitra" aria-label="default input example" required>
-                <br>
-                <input class="btn btn-outline-primary" type="submit" value="Selanjutnya">
-            </div>
-        </div>
-</form>             
-</div>
+        <div align="center">
 
-<?= $this->endSection(); ?>
+            <form action="/pencacah/homeData/" method="post" id="formcari">
+                <div class="card" style="width: 25rem;">
+                    <div class="card-header">
+                        <b>Masukkan Kode Mitra</b>
+                    </div>
+                    <div class="card-body">
+                        <div align="left">
+                            <a>Kode Mitra:</a>
+                        </div>
+                        <input class="form-control" type="text" name="Kode_Mitra" onchange="setKode(event)" placeholder="Kode Mitra" aria-label="default input example" required>
+                        <br>
+                        <input class="btn btn-outline-primary" type="submit" value="Selanjutnya">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+        <script>
+            function setKode(e) {
+                const uri = "/pencacah/homeData/";
+                const formcari = document.querySelector("#formcari");
+                formcari.action = uri + e.target.value;
+            }
+        </script>
+
+        <?= $this->endSection(); ?>

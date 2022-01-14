@@ -100,13 +100,32 @@ class C_dashboard extends BaseController
 		$M_pencacah->insert($data);
 		return redirect()->to(base_url('/pencacah'));
 	}
+	public function home()
+	{
+		//d($this->request->getVar('Kode_Mitra'));
+		//$M_pencacah = model("M_pencacah");
+		$data = [
+			'validation' => \Config\Services::validation(),
+			//'pencacah' => $M_pencacah->getPencacahdata($kode),
+			//'kode' => $this->request->getVar('Kode_Mitra'),
+		];
 
-	public function home(){
+		return view('pencacah/home', $data);
 
-		return view('pencacah/home');
+		//return view('pencacah/home');
 	}
 
-	public function homeData(){
-		return view('pencacah/data');
+	public function homeData($kode)
+	{
+		$M_pencacah = model("M_pencacah");
+		$data = [
+			'validation' => \Config\Services::validation(),
+			'pencacah' => $M_pencacah->getPencacahdata($kode),
+			//'kode' => $this->request->getVar('Kode_Mitra'),
+		];
+		return view('pencacah/edit', $data);
+
+
+		// 	// return view('pencacah/data');
 	}
 }
